@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 600px;
+    height: 160px;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 150px;
+}
+
+.dino {
+    position: absolute;
+    bottom: 0px;
+    width: calc(264px / 6);
+    height: 47px;
+   /* border: 2px solid red; */
+    background: url('assets/1x-trex.png');
+    background-repeat: no-repeat;
+    transition: all 0.31s ease-in-out;
+    animation-name: moving-foot;
+    animation-duration: 250ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+    /* animation-fill-mode: backwards; */
+}
+
+@keyframes moving-foot {
+    from {
+        background-position: -44px 0px;
+    }
+
+    to {
+        background-position: -176px 0px;
+    }
+}
+
+@keyframes stop-moving-foot {}
+
+.horizon {
+    width: 600px;
+    height: 13px;
+    position: absolute;
+    bottom: 0px;
+    background: url('assets/1x-horizon.png');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation-name: move_base;
+    animation-duration: 3.2s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move_base {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+.obstacle {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    /* border: 2px solid green; */
+    background: url('assets/1x-obstacle-small.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 100% 100%; */
+    bottom: 0;
+    left: 575px;
+    animation-name: move_cacti;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move_cacti {
+    0% {
+        left: 575px;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 0;
+        opacity: 0;
+    }
+}
