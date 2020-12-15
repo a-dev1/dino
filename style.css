@@ -24,7 +24,6 @@ body {
     bottom: 0px;
     width: calc(264px / 6);
     height: 47px;
-   /* border: 2px solid red; */
     background: url('assets/1x-trex.png');
     background-repeat: no-repeat;
     transition: all 0.31s ease-in-out;
@@ -32,7 +31,6 @@ body {
     animation-duration: 250ms;
     animation-iteration-count: infinite;
     animation-timing-function: steps(3);
-    /* animation-fill-mode: backwards; */
 }
 
 @keyframes moving-foot {
@@ -77,11 +75,9 @@ body {
     position: absolute;
     width: 25px;
     height: 50px;
-    /* border: 2px solid green; */
     background: url('assets/1x-obstacle-small.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: 100% 100%; */
     bottom: 0;
     left: 575px;
     animation-name: move_cacti;
